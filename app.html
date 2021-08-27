@@ -52,7 +52,77 @@
     <!-- ==== Main Section ==== -->
     <main class="flex-shrink-0">
         <div class="container">
-
+            <h1>Loan Calculator</h1>
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                    <div class="box-color p-3">
+                        <form action="" class="row">
+                            <div class="col-12">
+                                <label class="" for="loanAmount">Loan Amount:</label>
+                                <input class="form-control" type="number" name="loanAmount" id="loanAmount">
+                            </div>
+                            <div class="col-12">
+                                <label class="" for="loanLength">Payments:</label>
+                                <input class="form-control" type="number" name="loanTerm" id="loanTerm">
+                            </div>
+                            <div class="col">
+                                <label class="" for="loanRate">Rate:</label>
+                                <input class="form-control" type="number" name="loanRate" id="loanRate">
+                            </div>
+                            <div class="col-12 d-flex justify-content-end mt-3">
+                                <button id="calculateButton" class="btn btn-outline-info" type="button">Calculate</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col">
+                    <form action="" class="row">
+                        <div class="col-12 d-flex justify-content-center">
+                            <h5 class="fst-italic">Your Monthly Payments</h5>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center mt-2">
+                            <h1>$269.11</h1>
+                        </div>
+                        <div class="col-7 mt-4">
+                            Total Principal:
+                        </div>
+                        <div class="col-5 mt-4">
+                            $15,000.00
+                        </div>
+                        <div class="col-7">
+                            Total Interest:
+                        </div>
+                        <div class="col-5">
+                            $2,000.00
+                        </div>
+                        <div class="col-7">
+                            Total Cost:
+                        </div>
+                        <div class="col-5">
+                            $17,000.00
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Payment</th>
+                                <th>Principal</th>
+                                <th>Interest</th>
+                                <th>Total Interest</th>
+                                <th>Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="amorTable">
+                            <!--Insert Amortization Data Here-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </main>
     <!-- ==== Footer Section ==== -->
@@ -61,7 +131,7 @@
             <div class="row row-cols-1 row-cols-xl-3 gy-2">
                 <div
                     class="col d-flex order-last order-xl-first text-light align-items-center justify-content-center justify-content-xl-start">
-                    <div><span class="text-muted">&copy;2021</span> Casey Benson | casey.benson@live.com</div>
+                    <div><span class="text-white">&copy;2021</span> Casey Benson | casey.benson@live.com</div>
                 </div>
                 <div class="col d-flex align-items-center justify-content-center">
                     <img src="/img/CBLogoWht.svg" alt="Casey Benson Logo" height="24">
@@ -79,6 +149,9 @@
             </div>
         </div>
     </footer>
+    <template>
+
+    </template>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
@@ -87,6 +160,9 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <script src="js/site.js"></script>
+    <script>
+        document.getElementById("calculateButton").addEventListener("click", GetValue);
+    </script>
 </body>
 
 </html>

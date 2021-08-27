@@ -1,8 +1,9 @@
 :root {
-    --primary-color: #1d5888;
+    --primary-color: #000000;
     --secondary-color: #FD4103;
     --dark-color: #292929;
     --white-color: #e7e7e7;
+    --box-color: #ebe8e8;
 }
 
 body {
@@ -72,4 +73,13 @@ main>.container {
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+.box-color {
+    background-color: var(--box-color);
+}
+
+thead {
+    background-color: rgb(10, 58, 112);
+    color: #ffffff;
 }
