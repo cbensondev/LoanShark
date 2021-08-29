@@ -83,3 +83,7 @@ thead {
     background-color: rgb(10, 58, 112);
     color: #ffffff;
 }
+
+.bold {
+    font-weight: bold;
+}

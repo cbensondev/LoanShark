@@ -70,37 +70,48 @@
                                 <input class="form-control" type="number" name="loanRate" id="loanRate">
                             </div>
                             <div class="col-12 d-flex justify-content-end mt-3">
-                                <button id="calculateButton" class="btn btn-outline-info" type="button">Calculate</button>
+                                <button id="calculateButton" class="btn btn-outline-info"
+                                    type="button">Calculate</button>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="col">
-                    <form action="" class="row">
-                        <div class="col-12 d-flex justify-content-center">
-                            <h5 class="fst-italic">Your Monthly Payments</h5>
+                    <form action="">
+                        <div class="row">
+                            <div class="col d-flex justify-content-center">
+                                <h5 class="fst-italic">Your Monthly Payments</h5>
+                            </div>
+                        </div>    
+                        <div class="row">
+                            <div class="col d-flex justify-content-center mt-2">
+                                <h1 id="monthlyPaymentValue">$0.00</h1>
+                            </div>
                         </div>
-                        <div class="col-12 d-flex justify-content-center mt-2">
-                            <h1>$269.11</h1>
+                        <div class="row mt-4">
+                            <div class="col-5">
+                                <span>Total Principal:</span>
+                            </div>
+                            <div class="col-7 d-flex justify-content-start">
+                                <span id="totalPrincipalValue">$0.00</span>
+                            </div>
                         </div>
-                        <div class="col-7 mt-4">
-                            Total Principal:
+                        <div class="row">
+                            <div class="col-5">
+                                <span>Total Interest:</span>
+                            </div>
+                            <div class="col-7 d-flex justify-content-start">
+                                <span id="totalInterestValue">$0.00</span>
+                            </div>
                         </div>
-                        <div class="col-5 mt-4">
-                            $15,000.00
-                        </div>
-                        <div class="col-7">
-                            Total Interest:
-                        </div>
-                        <div class="col-5">
-                            $2,000.00
-                        </div>
-                        <div class="col-7">
-                            Total Cost:
-                        </div>
-                        <div class="col-5">
-                            $17,000.00
-                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <span>Total Cost:</span>
+                            </div>
+                            <div class="col-7 d-flex justify-content-start">
+                                <span id="totalCostValue">$0.00</span>
+                            </div>
+                        </div>                       
                     </form>
                 </div>
             </div>
@@ -161,7 +172,7 @@
     </script>
     <script src="js/site.js"></script>
     <script>
-        document.getElementById("calculateButton").addEventListener("click", GetValue);
+        document.getElementById("calculateButton").addEventListener("click", getValue);
     </script>
 </body>
 
